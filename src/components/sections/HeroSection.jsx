@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '../layout/Container';
-import hardwareStationImg from '../../assets/images/hardware-station.png';
+import hardwareStationImg from '../../assets/images/hardware-station.webp';
 
 export default function HeroSection() {
   return (
@@ -132,6 +132,8 @@ export default function HeroSection() {
             <img
               src={hardwareStationImg}
               alt="Thiết bị đếm cá giống tự động AquaTech"
+              fetchPriority="high"
+              decoding="async"
               style={{
                 width: '100%',
                 maxWidth: '560px',

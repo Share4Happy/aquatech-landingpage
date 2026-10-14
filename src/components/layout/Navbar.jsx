@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Container from './Container';
-import vietfutureLogo from '../../assets/images/vietfuture-logo.png';
-import lachongLogo from '../../assets/images/lachong-logo.png';
+import vietfutureLogo from '../../assets/images/vietfuture-logo.webp';
+import lachongLogo from '../../assets/images/lachong-logo.webp';
 import { projectData } from '../../data/project';
 import { Menu, X } from 'lucide-react';
 
@@ -54,6 +54,9 @@ export default function Navbar() {
             src={vietfutureLogo}
             alt="VietFuture 2026 Logo"
             className="brand-logo"
+            decoding="async"
+            width="170"
+            height="44"
           />
           <div
             style={{
@@ -67,6 +70,9 @@ export default function Navbar() {
             src={lachongLogo}
             alt="Lạc Hồng University Logo"
             className="brand-logo brand-logo--lh"
+            decoding="async"
+            width="145"
+            height="44"
           />
         </a>
 

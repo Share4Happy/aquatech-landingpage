@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from '../layout/Container';
-import vietfutureLogo from '../../assets/images/vietfuture-logo.png';
-import lachongLogo from '../../assets/images/lachong-logo.png';
+import vietfutureLogo from '../../assets/images/vietfuture-logo.webp';
+import lachongLogo from '../../assets/images/lachong-logo.webp';
 
 export default function Footer() {
   return (
@@ -31,6 +31,10 @@ export default function Footer() {
               src={vietfutureLogo}
               alt="VietFuture 2026 Logo"
               className="brand-logo brand-logo--footer"
+              loading="lazy"
+              decoding="async"
+              width="170"
+              height="44"
             />
             <div
               style={{
@@ -44,6 +48,10 @@ export default function Footer() {
               src={lachongLogo}
               alt="Lạc Hồng University Logo"
               className="brand-logo brand-logo--lh brand-logo--footer"
+              loading="lazy"
+              decoding="async"
+              width="145"
+              height="44"
             />
           </div>
 

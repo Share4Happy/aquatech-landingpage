@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '../layout/Container';
-import fishDetectionImg from '../../assets/images/fish-detection.png';
+import fishDetectionImg from '../../assets/images/fish-detection.webp';
 
 export default function IntroSection() {
   return (
@@ -120,6 +120,10 @@ export default function IntroSection() {
               <img
                 src={fishDetectionImg}
                 alt="AI nhận diện và đếm cá giống tự động"
+                loading="lazy"
+                decoding="async"
+                width="1301"
+                height="765"
                 style={{
                   width: '100%',
                   height: 'auto',

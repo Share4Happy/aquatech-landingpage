@@ -150,6 +150,8 @@ export default function HowItWorks() {
                 <img
                   src={stepImages[step.imageKey]}
                   alt={step.caption}
+                  loading="lazy"
+                  decoding="async"
                   style={{
                     width: '100%',
                     height: '100%',

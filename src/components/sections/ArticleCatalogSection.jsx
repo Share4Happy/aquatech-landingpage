@@ -194,6 +194,7 @@ export default function ArticleCatalogSection() {
                               alt={article.title}
                               className="s4h-card__img"
                               loading="lazy"
+                              decoding="async"
                               onError={(e) => {
                                 e.currentTarget.style.display = 'none';
                                 e.currentTarget.nextElementSibling?.removeAttribute('style');

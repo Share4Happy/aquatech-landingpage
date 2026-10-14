@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '../layout/Container';
-import hardwareStationImg from '../../assets/images/hardware-station.png';
+import hardwareStationImg from '../../assets/images/hardware-station.webp';
 import { featuresData } from '../../data/features';
 import { Check, Search, TrendingUp } from 'lucide-react';
 
@@ -128,6 +128,8 @@ export default function KeyFeatures() {
             <img
               src={hardwareStationImg}
               alt="Thiết bị đếm cá giống tự động AquaTech"
+              loading="lazy"
+              decoding="async"
               style={{
                 width: '100%',
                 maxWidth: '560px',

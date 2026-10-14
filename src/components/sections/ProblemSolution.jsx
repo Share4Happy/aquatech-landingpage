@@ -2,7 +2,7 @@ import React from 'react';
 import Container from '../layout/Container';
 import { problemSolutionData } from '../../data/problemSolution';
 import solFishDetectImg from '../../assets/images/sol-fish-detect.webp';
-import solDevicesImg from '../../assets/images/sol-devices.png';
+import solDevicesImg from '../../assets/images/sol-devices.webp';
 import solTableImg from '../../assets/images/sol-table.webp';
 import solHistoryImg from '../../assets/images/sol-history.webp';
 
@@ -336,6 +336,8 @@ export default function ProblemSolution() {
                     <img
                       src={solImages[sol.imageKey]}
                       alt={sol.caption}
+                      loading="lazy"
+                      decoding="async"
                       style={{
                         width: '100%',
                         height: '100%',
