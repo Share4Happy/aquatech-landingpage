@@ -80,26 +80,35 @@ npm run preview
 
 ---
 
-## 🚀 Deploy lên Vercel
+## 🚀 Deploy lên GitHub Pages
 
-### Cách 1: Qua GitHub (tự động redeploy)
+Dự án deploy tự động lên GitHub Pages qua **GitHub Actions** mỗi khi push lên nhánh `main`.
+
+### Kích hoạt lần đầu (chỉ làm 1 lần)
 
 1. Đẩy code lên GitHub: `git push origin main`
-2. Vào [vercel.com](https://vercel.com) → **Add New Project** → Import repo `aquatech-landingpage`
-3. Giữ nguyên cấu hình mặc định (Framework: Vite, Build: `npm run build`, Output: `dist`) → **Deploy**
-4. Mỗi lần push code mới, Vercel tự build và deploy lại
+2. Vào repo → **Settings** → **Pages**
+3. Mục **Build and deployment** → **Source** chọn **GitHub Actions**
+4. Push bất kỳ commit mới lên `main`, workflow `Deploy to GitHub Pages` sẽ tự build và deploy.
 
-### Cách 2: Bằng CLI (deploy thủ công)
+Sau khi deploy xong, truy cập: `https://phatnd249.github.io/aquatech-landingpage/`
 
-```bash
-npm i -g vercel       # cài Vercel CLI (lần đầu)
-vercel login          # đăng nhập (lần đầu)
-npm run deploy        # deploy production
+### Lưu ý về `base` path
+
+GitHub Pages phục vụ project site tại subpath `/<tên-repo>/` nên trong `vite.config.js` đã đặt:
+
+```js
+base: '/aquatech-landingpage/',
 ```
 
-Sau khi deploy, Vercel trả về URL, ví dụ: `https://aquatech-landingpage.vercel.app`.
+Nếu đổi tên repo, deploy lên user/org page (`<user>.github.io`) hoặc gắn custom domain, hãy cập nhật lại `base` cho phù hợp (`'/'` khi dùng tên miền riêng).
 
-> Mẹo: `npm run deploy` lệnh này chạy `vercel --prod`. Nếu chưa login hoặc chưa link project, làm theo hướng dẫn của CLI trong lần đầu.
+### Build thủ công
+
+```bash
+npm run build     # build ra thư mục dist/
+npm run preview   # xem trước bản build
+```
 
 ---
 
