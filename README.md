@@ -91,17 +91,17 @@ Dự án deploy tự động lên GitHub Pages qua **GitHub Actions** mỗi khi 
 3. Mục **Build and deployment** → **Source** chọn **GitHub Actions**
 4. Push bất kỳ commit mới lên `main`, workflow `Deploy to GitHub Pages` sẽ tự build và deploy.
 
-Sau khi deploy xong, truy cập: `https://phatnd249.github.io/aquatech-landingpage/`
+Site được phục vụ tại custom domain: `https://aquatech.share4happy.com/`
 
 ### Lưu ý về `base` path
 
-GitHub Pages phục vụ project site tại subpath `/<tên-repo>/` nên trong `vite.config.js` đã đặt:
+Dự án dùng **custom domain** nên trong `vite.config.js` giữ `base: '/'`.
 
-```js
-base: '/aquatech-landingpage/',
-```
+Nếu bỏ custom domain để dùng URL mặc định của GitHub Pages (`https://<user>.github.io/<tên-repo>/`), hãy đổi thành `base: '/<tên-repo>/'`.
 
-Nếu đổi tên repo, deploy lên user/org page (`<user>.github.io`) hoặc gắn custom domain, hãy cập nhật lại `base` cho phù hợp (`'/'` khi dùng tên miền riêng).
+### Custom domain
+
+Custom domain được khai báo trong `public/CNAME` (để file này xuất hiện trong `dist/` khi build). Đồng thời cấu hình domain trong **Settings → Pages → Custom domain**.
 
 ### Build thủ công
 
